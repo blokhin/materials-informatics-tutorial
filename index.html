@@ -1,19 +1,117 @@
-<html>
-<head>
+<!doctype html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <link rel="stylesheet" href="/reveal/reset.css">
     <link rel="stylesheet" href="/reveal/reveal.css">
     <link rel="stylesheet" href="/reveal/theme/white.css">
+    <link rel="stylesheet" href="/reveal/plugin/highlight/monokai.css">
+
+
+
 </head>
 <body>
 <div class="reveal">
     <div class="slides">
-        <section>Slide 1</section>
-        <section>Slide 2</section>
-        <section>Slide 3</section>
+
+    <section><!-- Slide -->
+        <code>Introduction to materials informatics</code>
+    </section>
+
+    <section data-background-iframe="https://tilde.pro/#contacts" data-background-interactive></section>
+
+    <section><!-- Slide -->
+        <h3>Outline</h3>
+        <br />
+        <ul>
+            <li>data &amp; formats</li>
+            <li>software &amp; simulations</li>
+            <li>collaboration &amp; sharing</li>
+        </ul>
+        <br /><br />
+        <small>Open the <a target="_blank" href="https://mybinder.org/v2/gh/blokhin/materials-informatics-tutorial/master?filepath=notebooks">Python notebooks</a> meanwhile.</small>
+    </section>
+
+    <section data-background-iframe="https://en.wikipedia.org/wiki/List_of_quantum_chemistry_and_solid-state_physics_software" data-background-interactive></section>
+
+    <section><!-- Slide -->
+        <h3>Ubiquitous software &#x1F6E0;&#x1F4BB;</h3>
+        <br />
+        <ul>
+            <li><a target="_blank" href="https://github.com/tilde-lab/awesome-materials-informatics">awesome-materials-informatics</a> at GitHub</li>
+            <li><a target="_blank" href="https://atomistic.software/">atomistic.software</a></li>
+        </ul>
+    </section>
+
+    <section><!-- Slide -->
+        <h3>From nanometers to meters</h3>
+        <br />
+        <img src="/images/bridge.png" alt="" />
+        <img src="/images/multiscale.png" alt="" />
+    </section>
+
+    <section><!-- Slide -->
+        <h3>Python &#x1F40D; &amp; ASE &#x1F48E;</h3>
+        <br />
+        <pre><code class="hljs" data-trim data-noescape data-line-numbers>
+from ase.spacegroup import crystal
+
+crystal_obj = crystal(
+    ('Al', 'Y', 'Cu', 'Cu'),
+    basis=[
+        ( 0.235, 0.0, 0.5 ),
+        ( 0.5861, 0.0, 0.0 ),
+        ( 0.333, 0.666, 0.5 ),
+        ( 0.0, 0.0, 0.0 )
+    ],
+    spacegroup=189,
+    cellpar=[7.033, 7.033, 4.023, 90, 90, 120],
+    primitive_cell=True
+)
+        </code></pre>
+        <small>Have a look at the <a target="_blank" href="https://wiki.fysik.dtu.dk/ase/">ASE website</a>. Then head over to the Python notebooks you have opened earlier.</small>
+    </section>
+
+    <section data-background-iframe="https://mpds.io/labs/mpds-ml-labs/vis.html" data-background-interactive></section>
+
+    <section><!-- Slide -->
+        <h3>Community &#x1F46B;</h3>
+        <br />
+        <ul>
+            <li><a target="_blank" href="https://matsci.org">matsci.org</a> forum</li>
+            <li><a target="_blank" href="https://mattermodeling.stackexchange.com/?tab=month">Stack Overflow</a> in materials science</li>
+        </ul>
+    </section>
+
+    <section><!-- Slide -->
+        <h3>Have your profiles if not yet &#x1F393;</h3>
+        <br />
+        <ul>
+            <li><a target="_blank" href="https://scholar.google.com/citations?user=B0h47WAAAAAJ&hl=en">Google Scholar</a></li>
+            <li><a target="_blank" href="https://orcid.org/0000-0001-9350-3034">ORCID</a></li>
+        </ul>
+    </section>
+
+    <section><!-- Slide -->
+        <h3>Conclusions &#x1F44C;</h3>
+        <br />
+        <ul>
+            <li>materials informatics is about how to handle materials data efficiently</li>
+            <li>Python + ASE can do any routine tasks for you</li>
+            <li>POSCAR and CIF are the most common formats for crystal structures</li>
+            <li>the modern materials simulations can be prepared fully online</li>
+        </ul>
+    </section>
+
     </div>
 </div>
 <script src="/reveal/reveal.js"></script>
+<script src="/reveal/plugin/highlight/highlight.js"></script>
 <script>
-Reveal.initialize();
+Reveal.initialize({progress: true, hash: true, hideCursorTime: 3000, plugins: [ RevealHighlight ]});
 </script>
 </body>
 </html>
