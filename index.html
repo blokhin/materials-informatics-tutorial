@@ -1,15 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Introduction to materials informatics">
     <meta name="author" content="Evgeny Blokhin">
     <title>Introduction to materials informatics</title>
 
-    <link rel="stylesheet" href="/reveal/reset.css">
-    <link rel="stylesheet" href="/reveal/reveal.css">
-    <link rel="stylesheet" href="/reveal/theme/white.css">
-    <link rel="stylesheet" href="/reveal/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="webassets/reveal/reset.css">
+    <link rel="stylesheet" href="webassets/reveal/reveal.css">
+    <link rel="stylesheet" href="webassets/reveal/theme/white.css">
+    <link rel="stylesheet" href="webassets/reveal/plugin/highlight/monokai.css">
 </head>
 <body>
 <div class="reveal">
@@ -33,22 +34,22 @@
         <small>Open the <a target="_blank" href="https://mybinder.org/v2/gh/blokhin/materials-informatics-tutorial/master?filepath=notebooks">Python notebooks</a> meanwhile.</small>
     </section>
 
+    <section><!-- Slide -->
+        <h3>From nanometers to meters</h3>
+        <br />
+        <img src="/images/bridge.png" alt="" />
+        <img src="/images/multiscale.png" alt="" />
+    </section>
+
     <section data-background-iframe="https://en.wikipedia.org/wiki/List_of_quantum_chemistry_and_solid-state_physics_software" data-background-interactive></section>
 
     <section><!-- Slide -->
         <h3>Ubiquitous software &#x1F6E0;&#x1F4BB;</h3>
         <br />
         <ul>
-            <li><a target="_blank" href="https://github.com/tilde-lab/awesome-materials-informatics">awesome-materials-informatics</a> at GitHub</li>
             <li><a target="_blank" href="https://atomistic.software/">atomistic.software</a></li>
+            <li><a target="_blank" href="https://github.com/tilde-lab/awesome-materials-informatics">awesome-materials-informatics</a> at GitHub</li>
         </ul>
-    </section>
-
-    <section><!-- Slide -->
-        <h3>From nanometers to meters</h3>
-        <br />
-        <img src="/images/bridge.png" alt="" />
-        <img src="/images/multiscale.png" alt="" />
     </section>
 
     <section><!-- Slide -->
@@ -108,15 +109,15 @@ crystal_obj = crystal(
         <h3>PS...</h3>
         <br />
         <ul>
-            <li><a target="_blank" href="https://tilde.pro">contact me</a></li>
+            <li><a target="_blank" href="https://tilde.pro">contact me</a> in case of any questions</li>
             <li>these slides on <a target="_blank" href="https://github.com/blokhin/materials-informatics-tutorial">GitHub</a></li>
         </ul>
     </section>
 
     </div>
 </div>
-<script src="/reveal/reveal.js"></script>
-<script src="/reveal/plugin/highlight/highlight.js"></script>
+<script src="webassets/reveal/reveal.js"></script>
+<script src="webassets/reveal/plugin/highlight/highlight.js"></script>
 <script>
 Reveal.initialize({progress: true, hash: true, hideCursorTime: 3000, plugins: [ RevealHighlight ]});
 </script>
