@@ -37,8 +37,8 @@
     <section><!-- Slide -->
         <h3>From nanometers to meters</h3>
         <br />
-        <img src="/images/bridge.png" alt="" />
-        <img src="/images/multiscale.png" alt="" />
+        <img src="images/bridge.png" alt="" />
+        <img src="images/multiscale.png" alt="" />
     </section>
 
     <section data-background-iframe="https://en.wikipedia.org/wiki/List_of_quantum_chemistry_and_solid-state_physics_software" data-background-interactive></section>
@@ -50,6 +50,86 @@
             <li><a target="_blank" href="https://atomistic.software/">atomistic.software</a></li>
             <li><a target="_blank" href="https://github.com/tilde-lab/awesome-materials-informatics">awesome-materials-informatics</a> at GitHub</li>
         </ul>
+    </section>
+
+    <section><!-- Slide -->
+        <h3>Crystal structure data formats</h3>
+        <br />
+        <ul>
+            <li><code>POSCAR</code></li>
+            <li><code>CIF</code></li>
+            <li><code>Optimade</code></li>
+        </ul>
+    </section>
+
+    <section><!-- Slide -->
+        <h3>POSCAR</h3>
+        <br />
+        <pre><code class="hljs" data-trim data-noescape data-line-numbers>
+https://mpds.io/entry/S251615
+1.0000000000000000
+    0.0000   2.0245   2.0245
+    2.0245   0.0000   2.0245
+    2.0245   2.0245   0.0000
+  Al
+   1
+Direct
+  0.000000  0.000000  0.000000
+        </code></pre>
+    </section>
+
+    <section><!-- Slide -->
+        <h3>CIF</h3>
+        <br />
+        <pre><code class="hljs" data-trim data-noescape data-line-numbers>
+data_mpds_labs
+_cell_length_a    15.017668
+_cell_length_b    30.035337
+_cell_length_c    30.035337
+_cell_angle_alpha 118.543768
+_cell_angle_beta  118.543768
+_cell_angle_gamma 92.541335
+_symmetry_space_group_name_H-M 'P1'
+_symmetry_Int_Tables_number 1
+loop_
+ _symmetry_equiv_pos_as_xyz
+ +x,+y,+z
+loop_
+ _atom_site_type_symbol
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ Ca   0.462 -0.342 -0.179
+ Be   0.362 -0.274 -0.420
+...
+        </code></pre>
+    </section>
+
+    <section><!-- Slide -->
+        <h3>Optimade</h3>
+        <br />
+        <pre><code class="hljs" data-trim data-noescape data-line-numbers>
+{
+   "attributes":{
+      "immutable_id":42,
+      "species":[
+         {
+            "chemical_symbols":[
+               "Au"
+            ]
+         }
+      ],
+      "cartesian_site_positions":[
+         [0,0,0]
+      ],
+      "lattice_vectors":[
+         [0,2,2],
+         [2,0,2],
+         [2,2,0]
+      ]
+   }
+}
+        </code></pre>
     </section>
 
     <section><!-- Slide -->
@@ -71,10 +151,41 @@ crystal_obj = crystal(
     primitive_cell=True
 )
         </code></pre>
-        <small>Have a look at the <a target="_blank" href="https://wiki.fysik.dtu.dk/ase/">ASE website</a>. Then head over to the Python notebooks you have opened earlier.</small>
+        <small>Have a look at the <a target="_blank" href="https://wiki.fysik.dtu.dk/ase/">ASE website</a>. Then head over to the <a target="_blank" href="https://mybinder.org/v2/gh/blokhin/materials-informatics-tutorial/master?filepath=notebooks">Python notebooks</a> you have opened earlier.</small>
     </section>
 
     <section data-background-iframe="https://mpds.io/labs/mpds-ml-labs/vis.html" data-background-interactive></section>
+
+    <section><!-- Slide -->
+        <h3>Materials Platform for Data Science</h3>
+        <br />
+        <a target="_blank" href="https://mpds.io"><img src="images/mpds.png" alt="" /></a>
+    </section>
+
+    <section><!-- Slide -->
+        <img src="images/optimade_dbs.png" alt="" />
+    </section>
+
+    <section><!-- Slide -->
+        <img src="images/optimade-text-right-transparent-bg.png" alt="" />
+    </section>
+
+    <section><!-- Slide -->
+        <h3>Optimade queries</h3>
+        <br />
+        <pre><code class="hljs" data-trim data-noescape data-line-numbers>
+filter=elements HAS ALL "Al","Mg","Sc","Mn","O"
+filter=chemical_formula_reduced="NaCl"
+filter=elements HAS ANY "Np","Cf"
+    AND elements HAS "O"
+    AND nelements=2
+filter=chemical_formula_anonymous="A2B"
+    AND chemical_formula_anonymous="AB2"
+filter=_mp_bandgap > 5.0
+filter=chemical_formula_descriptive IS KNOWN
+        </code></pre>
+        <small>Let's play with it at the <a target="_blank" href="https://optimade.science">Optimade.Science</a> aggregator. And then head over to the <a target="_blank" href="https://mybinder.org/v2/gh/blokhin/materials-informatics-tutorial/master?filepath=notebooks">Python notebooks</a> you have opened earlier.</small>
+    </section>
 
     <section><!-- Slide -->
         <h3>Community &#x1F46B;</h3>
@@ -100,7 +211,7 @@ crystal_obj = crystal(
         <ul>
             <li>materials informatics is about how to handle materials data efficiently</li>
             <li>Python + ASE can do any routine tasks for you</li>
-            <li>POSCAR and CIF are the most common formats for crystal structures</li>
+            <li>POSCAR &amp; CIF are the most common formats for crystal structures</li>
             <li>the modern materials simulations can be prepared fully online</li>
         </ul>
     </section>
