@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="webassets/reveal/reveal.css">
     <link rel="stylesheet" href="webassets/reveal/theme/white.css">
     <link rel="stylesheet" href="webassets/reveal/plugin/highlight/monokai.css">
+    <style>
+    .mpds_dot {height:22px;width:22px;border-radius:50%;display:inline-block;}
+    .p {background-color:#3e3f95;}
+    .s {background-color:#ffcc28;}
+    .c {background-color:#acc2b3;}
+    .b {background-color:#ed3237;}
+    </style>
 </head>
 <body>
 <div class="reveal">
@@ -161,9 +168,15 @@ crystal_obj = crystal(
     <section><!-- Slide -->
         <h3 style="letter-spacing:30px;">MPDS</h3>
         <br />
-        <a target="_blank" href="https://mpds.io"><img src="images/mpds.png" alt="MPDS: Materials Platform for Data Science" /></a>
+        <img src="images/mpds.png" alt="MPDS: Materials Platform for Data Science" usemap="#mpds" />
+        <map name="mpds">
+            <area shape="circle" coords="25,112,30" alt="phase diagrams" title="phase diagrams" href="https://mpds.io/inquiry/classes=binary&props=phase%20diagram&elements=Ti-O" target="_blank">
+            <area shape="circle" coords="112,25,30" alt="crystal structures" title="crystal structures" href="https://mpds.io/inquiry/classes=binary&props=crystal%20structure&elements=Ti-O" target="_blank">
+            <area shape="circle" coords="200,112,30" alt="physical properties" title="physical properties" href="https://mpds.io/inquiry/props=physical%20properties&elements=Ti-O&classes=binary" target="_blank">
+            <area shape="circle" coords="112,200,30" alt="published literature" title="published literature" href="https://mpds.io/inquiry/elements=Ti-O&years=1960&classes=binary" target="_blank">
+        </map>
         <br /><br />
-        <small>Phase diagrams, physical properties, and crystal structures are linked together.<br />Just click the logo.</small>
+        <small>Phase diagrams, physical properties, and crystal structures are interlinked from the published literature. Just hover and click the colored circles <span class="mpds_dot p"></span> <span class="mpds_dot s"></span> <span class="mpds_dot b"></span> <span class="mpds_dot c"></span> at the logo.</small>
     </section>
 
     <section><!-- Slide -->
