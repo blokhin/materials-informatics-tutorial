@@ -12,7 +12,7 @@ The accompanying Python notebooks are available in the `notebooks` folder and li
 - known initiatives and research groups to follow
 - crystalline formats
 - [Atomic Simulation Environment (ASE)](https://wiki.fysik.dtu.dk/ase/)
-- online visualization of crystals
+- online visualization of crystals with the [cifplayer](https://tilde-lab.github.io/cifplayer)
 - phase diagrams and physical properties related to crystal structure
 - [Materials Platform for Data Science](https://mpds.io)
 - [Optimade](https://optimade.org) API standard
