@@ -1,6 +1,6 @@
 # Materials Informatics Introductory Tutorial
 
-This lecture was originally given in the _materials computation_ course in July 2022 at the Chair of Materials Engineering of Additive Manufacturing, Technical University of Munich (Germany).
+This lecture is a part of the winter semester course "Introduction to Computational Materials Design" at the Chair of Materials Engineering of Additive Manufacturing, Technical University of Munich (Germany).
 
 An interactive set of slides is available at the [tutorial.tilde.pro](https://tutorial.tilde.pro) website.
 
