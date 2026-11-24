@@ -1,8 +1,10 @@
+
+
 # Materials Informatics Introductory Tutorial
 
 This lecture is a part of the winter semester course "Introduction to Computational Materials Design" at the Chair of Materials Engineering of Additive Manufacturing, Technical University of Munich (Germany).
 
-An interactive set of slides is available at the [tutorial.tilde.pro](https://tutorial.tilde.pro) website.
+An interactive set of slides is available at the [tutorial.tilde.pro](https://tutorial.tilde.pro) website, with the slide source in this repository as `index.html`.
 
 The accompanying Python notebooks are available in the `notebooks` folder and live in the [Binder online executable environment](https://mybinder.org/v2/gh/blokhin/materials-informatics-tutorial/master?filepath=notebooks).
 
